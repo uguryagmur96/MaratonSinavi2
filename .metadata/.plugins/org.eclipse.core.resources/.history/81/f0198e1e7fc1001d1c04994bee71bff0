@@ -1,0 +1,43 @@
+package uguryagmur;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class ReaderMain {
+	
+	static Map<String,String> hshMap=new HashMap<>();
+	static Scanner scan=new Scanner(System.in);
+	
+	public void readTheTextFileAndAddTheHashMap() {
+		try(BufferedReader reader=new BufferedReader(new FileReader("rehber.txt"))){
+			
+			String word=null;
+			while((word=reader.readLine())!=null) {
+				
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("File does not exist. Please check the file name and try again!");
+			e.printStackTrace();
+		} catch (IOException e) {
+			System.out.println("File reading error!");
+			e.printStackTrace();
+		}
+	}
+	
+
+	public static void main(String[] args) {
+		
+		
+    
+		
+
+	}
+
+}

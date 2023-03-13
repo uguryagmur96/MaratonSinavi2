@@ -1,0 +1,13 @@
+package uguryagmur;
+
+public class Reptiles extends Animal {
+
+	public Reptiles(String name, int weight, int length, boolean isDangerous) {
+		super(name, weight, length, isDangerous);
+		
+	}
+	
+	
+	
+
+}

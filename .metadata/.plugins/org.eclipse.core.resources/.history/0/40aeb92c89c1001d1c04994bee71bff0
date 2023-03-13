@@ -1,0 +1,5 @@
+package uguryagmur;
+
+public abstract class Animal {
+
+}

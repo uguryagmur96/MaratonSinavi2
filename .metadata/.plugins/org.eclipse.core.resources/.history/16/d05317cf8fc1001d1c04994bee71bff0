@@ -1,0 +1,23 @@
+package uguryagmur;
+
+public abstract class Mammals extends Animal {
+	
+	private String className;
+	
+	
+
+	public Mammals(String name, int weight, int length, boolean isDangerous,String classname) {
+		super(name, weight, length, isDangerous, classname);
+		
+		
+	}
+
+	@Override
+	public void roar() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public abstract void walk();
+
+}

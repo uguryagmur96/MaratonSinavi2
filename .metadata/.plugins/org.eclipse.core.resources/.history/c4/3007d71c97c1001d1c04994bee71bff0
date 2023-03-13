@@ -1,0 +1,14 @@
+package uguryagmur;
+
+public abstract class Customer {
+	
+	private int id;
+	private String ad;
+	private String soyAd;
+	private int koltukNo;
+	private boolean checkin;
+	private int BASE_FIYAT=100;
+	
+	
+
+}

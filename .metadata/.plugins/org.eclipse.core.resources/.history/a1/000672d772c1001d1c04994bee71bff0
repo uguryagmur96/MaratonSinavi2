@@ -1,0 +1,15 @@
+package uguryagmur;
+
+public class CustomString {
+	
+	private String word;
+
+	public CustomString() {
+		
+		this.word = "BoostMaratonSinavi";
+	}
+	
+	
+	
+
+}

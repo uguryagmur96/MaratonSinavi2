@@ -1,0 +1,40 @@
+package uguryagmur;
+
+import java.util.Map;
+
+public class BusinessYolcu extends Yolcu {
+	
+	
+	private boolean isVIP;
+	private Map<String,Integer>biletlerBusiness;
+
+	public BusinessYolcu(int id, String ad, String soyAd) {
+		super(id, ad, soyAd);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void checkinYap() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void ucagaBin() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void biletAl(EfirmaAdi eFirmaAdi) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void yolcuBilgileri() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

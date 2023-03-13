@@ -1,0 +1,55 @@
+package uguryagmur;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class BusinessYolcu extends Yolcu {
+	
+	
+	private boolean isVIP;
+	private Map<String,Integer>biletlerBusiness;
+	
+	private final int BUSINESSPRICE=200;
+	private final int BUSINESSVIPPRICE=150;
+
+	public BusinessYolcu(int id, String ad, String soyAd,boolean isVIp) {
+		super(id, ad, soyAd);
+		this.isVIP=isVIp;
+		this.biletlerBusiness=new HashMap<>();
+		
+	}
+
+	@Override
+	public void checkinYap() {
+		if(!isCheckin()) {
+			setCheckin(true);
+			System.out.println("Check in yapılmıştır. İyi uçuşlar!");
+		} else {
+			System.out.println("Check in daha öncesinde yapılmış. Uçağa binebilirsiniz.");
+		}
+
+	}
+
+	@Override
+	public void ucagaBin() {
+		if (isCheckin()) {
+			System.out.println(getKoltukNo() + " numaralı koltuğa geçiniz lütfen!");
+		} else {
+			System.out.println("Öncelikle check in işleminizi yapmanız gerekmektedir");
+		}
+
+	}
+
+	@Override
+	public void biletAl(EfirmaAdi eFirmaAdi) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void yolcuBilgileri() {
+		System.out.println("Bilgiler: "  + getAd() + "Bilet: " + biletlerBusiness);
+
+	}
+
+}

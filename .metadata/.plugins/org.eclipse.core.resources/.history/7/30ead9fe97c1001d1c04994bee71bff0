@@ -1,0 +1,99 @@
+package uguryagmur;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public abstract class Customer {
+	Random rand =new Random();
+	private int id;
+	private String ad;
+	private String soyAd;
+	private int koltukNo;
+	private boolean checkin;
+	private final int BASE_FIYAT=100;
+	
+	static List<Integer> biletNumaralari=new ArrayList<>();
+	
+	
+	public Customer(int id, String ad, String soyAd) {
+		super();
+		this.id = id;
+		this.ad = ad;
+		this.soyAd = soyAd;
+		this.koltukNo = rand.nextInt(1,176);
+		this.checkin = checkin;
+	}
+	
+	public abstract void checkinYap();
+	public abstract void ucagaBin();
+	public abstract void biletAl(EfirmaAdi eFirmaAdi);
+	public abstract void yolcuBilgileri();
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getAd() {
+		return ad;
+	}
+
+
+	public void setAd(String ad) {
+		this.ad = ad;
+	}
+
+
+	public String getSoyAd() {
+		return soyAd;
+	}
+
+
+	public void setSoyAd(String soyAd) {
+		this.soyAd = soyAd;
+	}
+
+
+	public int getKoltukNo() {
+		return koltukNo;
+	}
+
+
+	public void setKoltukNo(int koltukNo) {
+		this.koltukNo = koltukNo;
+	}
+
+
+	public boolean isCheckin() {
+		return checkin;
+	}
+
+
+	public void setCheckin(boolean checkin) {
+		this.checkin = checkin;
+	}
+
+
+	public int getBASE_FIYAT() {
+		return BASE_FIYAT;
+	}
+
+
+	public void setBASE_FIYAT(int bASE_FIYAT) {
+		BASE_FIYAT = bASE_FIYAT;
+	}
+	
+	
+	
+	
+	
+	
+
+}

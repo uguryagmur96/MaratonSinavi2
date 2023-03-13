@@ -1,0 +1,70 @@
+package uguryagmur;
+
+public abstract class Animal {
+	
+	private String name;
+	private int weight;
+	private int length;
+	private boolean isDangerous;
+	
+	
+	public Animal(String name, int weight, int length, boolean isDangerous) {
+		this.name = name;
+		this.weight = weight;
+		this.length = length;
+		this.isDangerous = isDangerous;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int getWeight() {
+		return weight;
+	}
+
+
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+
+	public int getLength() {
+		return length;
+	}
+
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
+
+	public boolean isDangerous() {
+		return isDangerous;
+	}
+
+
+	public void setDangerous(boolean isDangerous) {
+		this.isDangerous = isDangerous;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Animal [name=" + name + ", weight=" + weight + ", length=" + length + ", isDangerous=" + isDangerous
+				+ "]";
+	}
+	
+	public abstract void roar();
+	
+	
+	
+
+}

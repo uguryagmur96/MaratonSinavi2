@@ -1,0 +1,68 @@
+package uguryagmur;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Zoo {
+	
+	Map<String, Animal> animals=new HashMap<>();
+	Set<String> animalsName=new HashSet<>();
+	
+	
+	public void animalRoar(Animal animal) {
+		animal.roar();
+	}
+	
+	public void addMammalsAnimalAtZoo(Mammals mammals) {
+		if (sameName(mammals)) {
+			System.out.println("Aynı isimli bir hayvan mevcut hayvanat bahçesine eklenemedi");
+		} else {
+			animals.put(mammals.getName(), mammals);
+		}
+	}
+	public void addReptileAnimalAtZoo(Reptiles reptile) {
+		if (sameName(reptile)) {
+			System.out.println("Aynı isimli bir hayvan mevcut hayvanat bahçesine eklenemedi");
+		} else {
+			animals.put(reptile.getName(), reptile);
+		}
+	}
+	
+	public void FindTheAnimalsStrain(String name) {
+		if (animals.get(name) != null) {
+			System.out.println(animals.get(name).getName() + " bir " + animals.get(name).getUpperClassName()); ;
+		} else
+			 System.out.println(name + " isimli hayvan Hayvanat Bahçesinde yok"); ;
+		
+	}
+	public void FindTheAnimalsInfos(String name) {
+		if (animals.get(name) != null)
+			System.out.println(animals.get(name));
+		else
+			System.out.println(name + " isminde bir hayvan Hayvanat Bahçesinde yok");
+	}
+	public void movesAnimals(String name) {
+		if (animals.get(name).getClassName().equalsIgnoreCase("aslan")) {
+			Lion top = (Lion) animals.get(name);
+			top.walk();
+		} else if (hayvanlar.get(ad).getSinifAdi().equalsIgnoreCase("yilan")) {
+			Yilan tempA = (Yilan) hayvanlar.get(ad);
+			tempA.surun();
+		} else if (hayvanlar.get(ad).getSinifAdi().equalsIgnoreCase("kertenkele")) {
+			Kertenkele tempA = (Kertenkele) hayvanlar.get(ad);
+			tempA.surun();
+		} else if (hayvanlar.get(ad).getSinifAdi().equalsIgnoreCase("maymun")) {
+			Maymun tempA = (Maymun) hayvanlar.get(ad);
+			tempA.yuru();
+		}
+	}
+	
+	public boolean sameName(Animal animal) {
+		boolean sameN = !animalsName.add(animal.getName());
+		return sameN;
+	
+	
+
+}

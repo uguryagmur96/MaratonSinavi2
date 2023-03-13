@@ -1,0 +1,89 @@
+package uguryagmur;
+
+public abstract class Customer {
+	
+	private int id;
+	private String ad;
+	private String soyAd;
+	private int koltukNo;
+	private boolean checkin;
+	private int BASE_FIYAT=100;
+	
+	
+	public Customer(int id, String ad, String soyAd, int koltukNo, boolean checkin) {
+		super();
+		this.id = id;
+		this.ad = ad;
+		this.soyAd = soyAd;
+		this.koltukNo = koltukNo;
+		this.checkin = checkin;
+		BASE_FIYAT = 100;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getAd() {
+		return ad;
+	}
+
+
+	public void setAd(String ad) {
+		this.ad = ad;
+	}
+
+
+	public String getSoyAd() {
+		return soyAd;
+	}
+
+
+	public void setSoyAd(String soyAd) {
+		this.soyAd = soyAd;
+	}
+
+
+	public int getKoltukNo() {
+		return koltukNo;
+	}
+
+
+	public void setKoltukNo(int koltukNo) {
+		this.koltukNo = koltukNo;
+	}
+
+
+	public boolean isCheckin() {
+		return checkin;
+	}
+
+
+	public void setCheckin(boolean checkin) {
+		this.checkin = checkin;
+	}
+
+
+	public int getBASE_FIYAT() {
+		return BASE_FIYAT;
+	}
+
+
+	public void setBASE_FIYAT(int bASE_FIYAT) {
+		BASE_FIYAT = bASE_FIYAT;
+	}
+	
+	
+	
+	
+	
+	
+
+}

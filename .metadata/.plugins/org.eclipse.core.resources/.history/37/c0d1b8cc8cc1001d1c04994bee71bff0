@@ -1,0 +1,16 @@
+package uguryagmur;
+
+public class Lizard extends Reptiles {
+
+	public Lizard(String name, int weight, int length, boolean isDangerous) {
+		super(name, weight, length, isDangerous);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void creep() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

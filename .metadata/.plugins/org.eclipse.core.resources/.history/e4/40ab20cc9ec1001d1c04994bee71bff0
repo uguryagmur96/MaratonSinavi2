@@ -1,0 +1,64 @@
+package uguryagmur;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class EcoYolcu extends Yolcu {
+
+	private Map<String,Integer>biletlerEco;
+	private final int EKONOMI_FIYAT=100;
+	
+	
+	
+	
+	public EcoYolcu(int id, String ad, String soyAd) {
+		super(id, ad, soyAd);
+		biletlerEco=new HashMap<>();
+	}
+
+
+
+
+	@Override
+	public void checkinYap() {
+		if(!isCheckin()) {
+			setCheckin(true);
+			System.out.println("Check in yapılmıştır. İyi uçuşlar!");
+		} else {
+			System.out.println("Check in daha öncesinde yapılmış. Uçağa binebilirsiniz.");
+		}
+		
+	}
+
+
+
+
+	@Override
+	public void ucagaBin() {
+		if (isCheckin()) {
+			System.out.println(getKoltukNo() + " numaralı koltuğa geçiniz lütfen!");
+		} else {
+			System.out.println("Öncelikle check in işleminizi yapmanız gerekmektedir");
+		}
+		
+	}
+
+
+
+
+	@Override
+	public void biletAl(EfirmaAdi eFirmaAdi) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	@Override
+	public void yolcuBilgileri() {
+		System.out.println("Bilgiler: "  + getAd() + "Bilet: " + biletlerEco);
+		
+	}
+
+}

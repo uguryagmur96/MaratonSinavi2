@@ -1,0 +1,20 @@
+package uguryagmur;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zoo {
+	
+	Map<Animal, String> animals=new HashMap<>();
+	List<String> animalsName=new ArrayList<>();
+	
+	
+	public void animalRoar(Animal animal) {
+		animal.roar();
+	}
+	
+	
+
+}

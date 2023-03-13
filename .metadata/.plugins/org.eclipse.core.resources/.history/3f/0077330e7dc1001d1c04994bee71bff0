@@ -1,0 +1,17 @@
+package uguryagmur;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ReaderMain {
+
+	public static void main(String[] args) {
+		
+		Person person=new Person();
+		
+		Map<String,String> hshMap=new HashMap<>();
+		
+
+	}
+
+}

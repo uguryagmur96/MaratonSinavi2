@@ -1,0 +1,29 @@
+package uguryagmur;
+
+public class BusinessYolcu extends Yolcu {
+
+	@Override
+	public void checkinYap() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void ucagaBin() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void biletAl(EfirmaAdi eFirmaAdi) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void yolcuBilgileri() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

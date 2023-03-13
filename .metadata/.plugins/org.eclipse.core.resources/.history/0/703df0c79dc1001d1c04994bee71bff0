@@ -1,0 +1,69 @@
+package uguryagmur;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+public class BusinessYolcu extends Yolcu {
+	Random rand =new Random();
+	
+	private boolean isVIP;
+	private Map<String,Integer>biletlerBusiness;
+	
+	private final int BUSINESSPRICE=200;
+	private final int BUSINESSVIPPRICE=150;
+
+	public BusinessYolcu(int id, String ad, String soyAd,boolean isVIp) {
+		super(id, ad, soyAd);
+		this.isVIP=isVIp;
+		this.biletlerBusiness=new HashMap<>();
+		
+	}
+
+	@Override
+	public void checkinYap() {
+		if(!isCheckin()) {
+			setCheckin(true);
+			System.out.println("Check in yapılmıştır. İyi uçuşlar!");
+		} else {
+			System.out.println("Check in daha öncesinde yapılmış. Uçağa binebilirsiniz.");
+		}
+
+	}
+
+	@Override
+	public void ucagaBin() {
+		if (isCheckin()) {
+			System.out.println(getKoltukNo() + " numaralı koltuğa geçiniz lütfen!");
+		} else {
+			System.out.println("Öncelikle check in işleminizi yapmanız gerekmektedir");
+		}
+
+	}
+
+	@Override
+	public void biletAl(EfirmaAdi eFirmaAdi) {
+		int fiyat;
+		if(isVIP) {
+			fiyat=BUSINESSVIPPRICE+BUSINESSPRICE+getBASE_FIYAT();
+			biletlerBusiness.put(eFirmaAdi.toString(), fiyat);
+			System.out.println(getAd() + " adlı yolcu " + eFirmaAdi.toString() + " firmasında vip bilet satınb aldınız");
+		} else {
+			fiyat=BUSINESSPRICE+getBASE_FIYAT();
+			biletlerBusiness.put(eFirmaAdi.toString(), fiyat);
+			System.out.println(getAd() + " adlı yolcu " + eFirmaAdi.toString() + " firmasında vip bilet satınb aldınız");
+		}
+		int sayi =rand.nextInt(1,176);
+		setKoltukNo(biletNumaralari.get(sayi));
+		biletNumaralari.remove(sayi);
+		
+
+	}
+
+	@Override
+	public void yolcuBilgileri() {
+		System.out.println("Bilgiler: "  + getAd() + "Bilet: " + biletlerBusiness);
+
+	}
+
+}

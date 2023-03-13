@@ -1,0 +1,17 @@
+package uguryagmur;
+
+public class Lion extends Mammals {
+
+	public Lion(String name, int weight, int length, boolean isDangerous,String className) {
+		super(name, weight, length, isDangerous, className);
+		setDangerous(true);
+		setClassName("Mammals");
+	}
+
+	@Override
+	public void walk() {
+		System.out.println(getName()+ " usulca yürüyor!");
+		
+	}
+
+}

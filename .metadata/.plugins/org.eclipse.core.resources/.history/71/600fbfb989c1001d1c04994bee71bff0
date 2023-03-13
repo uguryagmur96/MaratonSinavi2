@@ -1,0 +1,5 @@
+package uguryagmur;
+
+public class Mammals extends Animal {
+
+}

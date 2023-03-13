@@ -1,0 +1,54 @@
+package uguryagmur;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Zoo {
+	
+	Map<String, Animal> animals=new HashMap<>();
+	List<String> animalsName=new ArrayList<>();
+	
+	
+	public void animalRoar(Animal animal) {
+		animal.roar();
+	}
+	
+	public void addMammalsAnimalAtZoo(Mammals mammals) {
+		for (String string : animalsName) {
+			if(mammals.getName().equalsIgnoreCase(string)) {
+				System.out.println("Aynı isimde başka bir hayvan ekleyemezsiniz!");
+			} else {
+				animals.put(mammals.getName(),mammals );
+				animalsName.add(mammals.getName());
+			}
+		}
+	}
+	public void addReptileAnimalAtZoo(Reptiles reptile) {
+		for (String string : animalsName) {
+			if(reptile.getName().equalsIgnoreCase(string)) {
+				System.out.println("Aynı isimde başka bir hayvan ekleyemezsiniz!");
+			} else {
+				animals.put(reptile.getName(),reptile );
+				animalsName.add(reptile.getName());
+			}
+		}
+	}
+	
+	public void FindTheAnimalsStrain(String name) {
+		if(animals.get(name)!=null) {
+			System.out.println(animals.get(name)+ " adlı hayvan " + animals.get(name).getClassName());
+		}
+	}
+	public void FindTheAnimalsInfos(String name) {
+		if(animals.get(name)!=null) {
+			System.out.println(animals.get(name));
+		}
+	}
+	
+	
+	
+	
+
+}

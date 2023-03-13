@@ -1,0 +1,10 @@
+package uguryagmur;
+
+public class Lion extends Mammals {
+
+	public Lion(String name, int weight, int length, boolean isDangerous) {
+		super(name, weight, length, isDangerous);
+		// TODO Auto-generated constructor stub
+	}
+
+}

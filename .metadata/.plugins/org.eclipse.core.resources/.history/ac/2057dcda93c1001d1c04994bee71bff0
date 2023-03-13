@@ -1,0 +1,25 @@
+package uguryagmur;
+
+public abstract class Reptiles extends Animal {
+	
+	
+
+	public Reptiles(String name, int weight, int length, boolean isDangerous,String className) {
+		super(name, weight, length, isDangerous, className);
+		
+		
+	}
+
+	@Override
+	public void roar() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	public abstract void creep();
+	
+	
+	
+
+}

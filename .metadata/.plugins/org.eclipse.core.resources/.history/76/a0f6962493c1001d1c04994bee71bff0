@@ -1,0 +1,17 @@
+package uguryagmur;
+
+public class Snake extends Reptiles {
+
+	public Snake(String name, int weight, int length, boolean isDangerous,String className) {
+		super(name, weight, length, isDangerous, className);
+		setClassName("Reptiles");
+		setDangerous(true);
+	}
+
+	@Override
+	public void creep() {
+		System.out.println(getName() + " sürünüyor!");
+		
+	}
+
+}
